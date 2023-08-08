@@ -21,8 +21,8 @@ def home(request):
     return render(request,'spare/home.html', {'products': products, 'product_filters': product_filters})
     
 @login_required
-def product_detail(request, product_id):
-    product = Product.objects.get(id = product_id)
+def product_detail(request, id):
+    product = Product.objects.get(id == id)
     return render(request,'spare/product_detail.html',{'product':product})
     
 
