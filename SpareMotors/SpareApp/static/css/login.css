@@ -1,0 +1,23 @@
+#form{
+    width: 500px;
+    color: blue;
+    height: 400px;
+    padding: 20px;
+    border: 3px solid #19d4fc;
+    border-radius: 25px;
+    margin: 650px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+h2{
+    color: chocolate;
+    margin: 100px 650px 10px 700px;
+    padding-top: 50px;
+   
+}
+
+
+.form{
+    margin-top: 200px;
+}

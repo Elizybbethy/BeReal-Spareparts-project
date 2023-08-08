@@ -1,0 +1,37 @@
+form{
+    max-width: 100%;
+    align-items: flex-end;
+    
+}
+
+body{
+    background-color: #2F4F4F;
+}
+h1{
+    color: brown;
+}
+.container{
+    margin: 20px 50px;
+}
+th{
+    font-size: 25px;
+    width: 800px;
+    
+}
+td{
+    font-size: 22px;
+    padding-left: 100px;
+}
+
+table{
+    margin-left: 150px;
+    position: relative;
+     
+}
+.btn{
+    background-color:#4979A9;
+}
+.navbar{background-color: #D3D3D3;
+
+}
+

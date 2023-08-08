@@ -1,0 +1,18 @@
+.navbar {
+    background-color: #c4d1de;
+}
+
+.navbar-brand {
+    font-size: 30px !important;
+}
+
+.navbar li a {
+    font-size: 24px;
+    margin-left: 25px;
+}
+
+.navbar-nav{
+    display: flex;
+    justify-content: flex-end;
+    color: aqua;
+}

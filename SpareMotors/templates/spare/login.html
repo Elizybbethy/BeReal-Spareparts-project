@@ -1,0 +1,45 @@
+
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}"> 
+     <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+
+</head>
+
+<body>
+     <nav class="nav navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index">
+                <img src="{% static 'css/images/motorlogo.jpg'%}" alt="Logo" width="45" height="50"
+                    style="border-radius: 25px;" class="d-inline-block align-text-top">
+                <h1 class="d-inline-block align-text-top" href="index">BeRealMotor</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    
+        <h2>Please login here!</h2>
+        {% block content %}
+        <form id="form" method="POST">
+            {% csrf_token %} <br>
+            {{ form | crispy}} <br>
+            <input type="submit" name="Submit" class="btn btn-info btn-primary btn-block">
+        </form>
+        {% endblock %}
+    
+</body>
+
+</html>
