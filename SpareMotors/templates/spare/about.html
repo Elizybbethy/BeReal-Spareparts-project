@@ -7,13 +7,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/home.css'%}">
+    {% comment %} <link rel="stylesheet" href="{% static 'css/home.css'%}"> {% endcomment %}
+     <link rel="stylesheet" href={% static 'css/about.css' %}>
     <title>Document</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row welcome">
+    <div class="container welcome">
+        <div class="row ">
             <h1>Welcome to BeReal SpareMotors</h1>
             <p>Powering Your Drive, Anytime, Anywhere!</p>
         </div>

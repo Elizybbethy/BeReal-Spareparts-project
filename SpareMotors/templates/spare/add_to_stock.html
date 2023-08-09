@@ -1,0 +1,17 @@
+{% extends 'spare/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="container">
+    <form method="POST" action="">
+        <h1 class= "text-center">ADD STOCK</h1>
+        <h1 class="text-center">FORM</h1>
+
+        {% csrf_token %}
+        {{form | crispy}}
+        <input type="submit" class="btn btn-secondary btn" type="button">
+    </form>
+
+</div>
+{% endblock %}

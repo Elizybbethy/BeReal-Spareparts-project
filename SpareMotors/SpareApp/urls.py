@@ -13,8 +13,12 @@ urlpatterns = [
     path('about', views.about, name='about'),
     path('home/<int:product_id>', views.product_detail, name='product_detail'),
     
+    #All sales made
+    path('all_sales/', views.all_sales, name='all_sales'),
+    path('issue_item/<int:pk>', views.issue_item, name='issue_item'),
     
-    
+    #Add to stock
+    path('add_to_stock/<int:pk>', views.add_to_stock, name="add_to_stock"),
     
     #Login path 
     path('login/', auth_views.LoginView.as_view(template_name='spare/login.html'), name= 'login'),

@@ -11,5 +11,5 @@ class SaleForm(ModelForm):
     class Meta:
         model = Sale
         fields = [
-            "amount_received", "issued_to","phone", "branch_name"
+            "quantity","amount_received", "issued_to","phone", "branch"
         ]
