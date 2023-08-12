@@ -1,0 +1,29 @@
+{% extends 'spare/base.html' %}
+{% block content %}
+<br>
+<div class="container">
+    <h1 class="card-header text-center" id="heading">All Recorded Receipts</h1><br>
+    {% for sale in sales %}
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title">Customer:{{sale.issued_to}}</h3>
+            <h6 class="card-text">Item:{{sale.part}}</h6>
+            <h6 class="card-text">Amount Paid: Ugx{{sale.amount_received}}</h6>
+            <h6 class="card-text">Quantity:{{sale.quantity}}</h6>
+            <h2>Total Price: Ugx{{sale.get_total}}</h2>
+            <div style="flex: 1">
+                <h6 class="card-text">Change Collected: Ugx{{sale.get_change}}</h6>
+                <a href="{% url 'receipt_detail' sale.id %}">
+                    <input type="submit" 
+                    value="Final Receipt"
+                    class="btn btn-success"
+                    type="button"
+                    />
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

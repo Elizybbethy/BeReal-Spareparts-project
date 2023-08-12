@@ -15,10 +15,14 @@ urlpatterns = [
     
     #All sales made
     path('all_sales/', views.all_sales, name='all_sales'),
-    path('issue_item/<int:pk>', views.issue_item, name='issue_item'),
+    path('issue_item/<str:pk>', views.issue_item, name='issue_item'),
     
     #Add to stock
-    path('add_to_stock/<int:pk>', views.add_to_stock, name="add_to_stock"),
+    path('add_to_stock/<str:pk>', views.add_to_stock, name="add_to_stock"),
+    
+    #Receipt url
+    path('receipt', views.receipt, name='receipt'),
+    path('receipt/<int:receipt_id>', views.receipt_detail, name='receipt_detail'),
     
     #Login path 
     path('login/', auth_views.LoginView.as_view(template_name='spare/login.html'), name= 'login'),

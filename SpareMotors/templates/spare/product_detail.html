@@ -1,20 +1,20 @@
 {% extends 'spare/base.html'%} {% block content%}
 <br></br>
 
-<div class = "container">
+<div class = "container" id="action">
     <a href="{% url 'issue_item' product.id %}" ><input type="submit" value="Buy Item" class="btn btn-secondary" btn type="button"/></a>
-    <a href="{% url 'add_to_stock' product.id %}" ><input type= "submit" value="Add to Stock" class="btn btn-secondary btn" type="button"/></a>
+    <a href="{% url 'add_to_stock' product.id %}" ><input type= "submit" value="Add Stock" class="btn btn-secondary btn" type="button"/></a>
 </div>
 
 <br></br>
 <div class = "container">
-  <table class="table">
+  <table class="table" id="table">
     <thead class="thead-dark">
       <tr>
         <th scope="col">Category</th>
         <th scope="col">Item Name</th>
         <th scope="col">Quantity</th>
-        <th scope="col">Unit Price(UGX)</th>   
+        <th scope="col">Unit Price(Ugx)</th>   
       </tr>
     </thead>
     <tbody>
@@ -22,7 +22,7 @@
         <td>{{product.Category_name}}</td>
         <td>{{product.part_name}}</td>
         <td>{{product.total_quantity}}</td>
-        <td>UGX{{product.unit_price}}</td>   
+        <td>Ugx{{product.unit_price}}</td>   
       </tr>
     </tbody>  
   </table>

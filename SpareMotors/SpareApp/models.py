@@ -14,8 +14,10 @@ class Product(models.Model):
     Category_name = models.ForeignKey(
         Category, on_delete=models.CASCADE, null=False, blank=False
     )
-    part_name = models.CharField(max_length=50, null=True, blank=False)
-    arrival_date = models.DateField(default=timezone.now)
+    part_name = models.CharField(max_length=50, null=False, blank=False)
+    arrival_date = models.DateTimeField(default=timezone.now, null=False,blank=False)
+    received_quantity = models.IntegerField(default=0, null=False,blank=False)
+    issued_quantity= models.IntegerField(default=0, null=False,blank=False)
     total_quantity = models.IntegerField(default=0, null=False, blank=False)
     unit_price = models.IntegerField(default=0, null=True, blank=False)
     country_of_origin = models.CharField(max_length=50, null=True, blank=False)
@@ -38,7 +40,7 @@ class Sale(models.Model):
         return int(total)
     
     def get_change(self):
-        change = self.get_total - self.amount_received
+        change = self.get_total() - self.amount_received
         return abs(int(change))
     
     def __str__(self):

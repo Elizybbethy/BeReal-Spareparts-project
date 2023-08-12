@@ -2,21 +2,21 @@
 <br>
 
 <div class = "container">
-  <h1 class= "text-center">ITEMS IN STOCK</h1>
+  <h1 class= "text-center" id="heading">ITEMS IN STOCK</h1>
   <br>
 
-  <div class = "container">
+  <div class = "container" id="stock">
     <form action = "" method = "GET">
-      {{product_filters.form}}
+      Search{{product_filters.form}}
       <input 
       type = "submit"
-      value = "Search Products"
+      value = "Search here!"
       class="btn btn-secondary btn"/>
     </form>
   </div>
 
   <br>
-  <table class="table">
+  <table class="table" id="table">
     <thead class="thead-dark">
       <tr>
         <th scope="col">Category</th>
@@ -33,10 +33,10 @@
         <td>{{product.part_name}}</td>
         <td>{{product.total_quantity}}</td>
         <td>UGX{{product.unit_price}}</td>
-        <td><a href="{% url 'product_detail' product.id %}"
+        <td style="text-align: center;"><a href="{% url 'product_detail' product.id %}"
               ><input
                 type="submit"
-                value="BUY ITEM"
+                value="Action"
                 class="btn btn-secondary btn"
                 type="button"
             /></a></td>

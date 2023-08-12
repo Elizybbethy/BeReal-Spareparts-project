@@ -1,0 +1,40 @@
+{% extends 'spare/base.html' %}
+{% block content %}
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-center">Order Summary</h1><br>
+                    <h2 class="lead"><strong>Customer Name: {{receipt.issued_to | title}}</strong></h2>
+                </div>
+                <div class="card-block">
+                    <div class="table-responsive">
+                        <table class="text table-sm" >
+                            <thead>
+                                <tr>
+                                    <td><strong>Part Name</strong></td>
+                                    <td><strong>Item Quantity</strong></td>
+                                    <td class="text-xs-center"><strong>Total Bill(Ugx)</strong></td>
+                                    <td class="text-xs-right"><strong>Amount Paid(Ugx)</strong></td>
+                                    <td class="text-xs-right"><strong>Total Balance(Ugx)</strong></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{receipt.part | title}}</td>
+                                    <td class="text-xs-center">{{receipt.quantity }}</td>
+                                    <td class="text-xs-right">Ugx{{receipt.get_total | title}}</td>
+                                    <td class="text-xs-right">Ugx{{receipt.amount_received}}</td>
+                                    <td class="text-xs-right">Ugx{{receipt.get_change}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

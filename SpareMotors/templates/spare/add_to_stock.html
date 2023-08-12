@@ -4,9 +4,9 @@
 {% block content %}
 
 <div class="container">
-    <form method="POST" action="">
-        <h1 class= "text-center">ADD STOCK</h1>
-        <h1 class="text-center">FORM</h1>
+    <form method="POST" action="" id="form">
+        <h1 class= "text-center" id="heading">ADD STOCK</h1>
+        
 
         {% csrf_token %}
         {{form | crispy}}

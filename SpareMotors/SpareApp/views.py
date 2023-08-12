@@ -74,3 +74,12 @@ def add_to_stock(request,pk):
             print(issued_item.total_quantity)
             return redirect('home')
     return render(request,'spare/add_to_stock.html',{'form':form})
+
+@login_required
+def receipt(request):
+    sales = Sale.objects.all().order_by('-id')
+    return render(request, 'spare/receipt.html', {'sales':sales})
+
+def receipt_detail(request, receipt_id):
+    receipt = Sale.objects.get(id=receipt_id)
+    return render(request, 'spare/receipt_detail.html', {'receipt':receipt})

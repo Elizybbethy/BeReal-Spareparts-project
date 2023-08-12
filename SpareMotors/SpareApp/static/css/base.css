@@ -1,37 +1,59 @@
-form{
+form {
     max-width: 100%;
-    align-items: flex-end;
-    
+    align-items: center;
 }
 
-body{
-    background-color: #2F4F4F;
+body {
+    background-color: #36454F;
+    overflow-x: hidden;
 }
-h1{
-    color: rgb(78, 39, 39);
-}
-.container{
+
+.container {
     margin: 20px 50px;
 }
-th{
+
+th {
     font-size: 25px;
-    width: 800px;
-    
 }
-td{
+
+td {
     font-size: 22px;
-    padding-left: 100px;
 }
 
-table{
-    margin-left: 150px;
-    position: relative;
-     
-}
-.btn{
-    background-color:#4979A9;
-}
-.navbar{background-color: #D3D3D3;
 
+.btn {
+    background-color: #4979A9;
 }
 
+.navbar {
+    background-color: #D3D3D3;
+}
+
+#heading {
+    color: #D3D3D3;
+}
+
+#form {
+    width: 600px;
+    height: auto;
+    margin: 50px 350px;
+    color: #B6D0E2;
+}
+
+#stock {
+    color: #D3D3D3;
+    margin: 30px 300px;
+    font-size: 25px;
+}
+
+#table {
+    margin: 30px 30px;
+    padding: 50px;
+    width: 100%;
+    border-spacing: 40px;
+}
+
+#action {
+    margin-left: 300px;
+    margin-bottom: 0px;
+}

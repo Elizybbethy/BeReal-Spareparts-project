@@ -1,6 +1,5 @@
 
 body{
-    flex: 1;
     background-image: url('./images/bac2.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -9,15 +8,13 @@ body{
 
 .card {
     border: 6px solid #3F000F;
-    margin: 160px;
-
+    margin: 50px 100px;
 }
 
 .card-text {
     text-align: center;
     color: #833C5C;
     font-size: 20px;
-    background-color:
 }
 
 .card-title {
