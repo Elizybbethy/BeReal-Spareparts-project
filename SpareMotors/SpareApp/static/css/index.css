@@ -1,5 +1,6 @@
 
 body{
+    overflow-x: hidden;
     background-image: url('./images/bac2.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -7,7 +8,7 @@ body{
 }
 
 .card {
-    border: 6px solid #3F000F;
+    border: 6px solid #bcd0e4;
     margin: 50px 100px;
 }
 

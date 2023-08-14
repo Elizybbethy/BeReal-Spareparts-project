@@ -26,7 +26,11 @@ td {
 }
 
 .navbar {
-    background-color: #D3D3D3;
+    background-color: #c4d1de;
+}
+
+.nav-link{
+    color: #36454F;
 }
 
 #heading {
