@@ -1,5 +1,9 @@
 .navbar {
     background-color: #c4d1de;
+    /* position: fixed; */
+        /* top: 0; */
+        /* left: 0; */
+        /* width: 100%; */
 }
 
 .navbar-brand {

@@ -27,9 +27,16 @@ td {
 
 .navbar {
     background-color: #c4d1de;
+    position: sticky;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    top: 0;
+    opacity: 100%;
+    z-index: 500;
 }
 
-.nav-link{
+.nav-link {
     color: #36454F;
 }
 

@@ -1,0 +1,17 @@
+.card-body {
+    font-family: 'Times New Roman';
+
+}
+
+#receipt {
+    width: 70%;
+    height: 300px;
+    margin-left: 210px;
+}
+
+.final_receipt,
+td {
+    margin: 100px;
+    padding: 50px;
+    text-align: center;
+} 

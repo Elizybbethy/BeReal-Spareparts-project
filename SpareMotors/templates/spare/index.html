@@ -5,8 +5,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript%}
+    
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}"> 
@@ -18,9 +20,9 @@
     <nav class="nav navbar navbar-expand-lg ">
         <div class="container-fluid">
             <a class="navbar-brand" href="/index">
-                <img src="{% static 'css/images/motorlogo.jpg'%}" alt="Logo" width="45" height="50"
-                    style="border-radius: 25px;" class="d-inline-block align-text-top">
-                <h1 class="d-inline-block align-text-top">BeRealMotor</h1>
+                <img src="{% static 'css/images/bereallogo.png'%}" alt="Logo" width="45" height="50"
+                    style="border-radius: 50%;" class="d-inline-block align-text-top">
+                <h1 class="d-inline-block align-text-top" style="color: black;">BeRealMotor</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">

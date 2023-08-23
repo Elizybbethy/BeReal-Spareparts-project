@@ -5,14 +5,14 @@
 <h1 class = "text-center" id="heading">TOTAL SALES MADE</h1><br>
   <table class="table" id="table">
     <thead class="thead-dark">
-      <tr>
+      <tr style="text-align: center;">
         <th scope="col">Total Amount Received</th>
         <th scope="col">Total Change Given</th>
-        <th scope="col">Net Amount</th>
+        <th scope="col">Income</th>
       </tr>
     </thead>  
     <tbody>
-      <tr>    
+      <tr style="text-align: center;">    
         <td>UGX{{total}}</td>
         <td>UGX{{change}}</td>
         <td>UGX{{net}}</td>
@@ -25,11 +25,11 @@
 <div class = "container">
   <table class="table" id="table">
     <thead class="thead-dark">
-      <tr>
+      <tr style="text-align: center;">
         <th scope="col">Customer name</th>
         <th scope="col">Item Bought</th>
         <th scope="col">Quantity</th>
-        <th scope="col">Unit Price(UGX)</th>
+        <th scope="col">Unit Price(Ugx)</th>
         <th scope="col">Total Cost</th>
         <th scope="col">Amount Paid</th>
         <th scope="col">Change Collected</th>
@@ -37,14 +37,14 @@
     </thead>
     {% for sale in sales %}
     <tbody>
-      <tr>    
+      <tr style="text-align: center;">    
         <td>{{sale.issued_to | title}}</td>
         <td>{{sale.part | title}}</td>
         <td>{{sale.quantity}}</td>
-        <td>UGX{{sale.unit_price}}</td>
-        <td>UGX{{sale.get_total}}</td>
-        <td>UGX{{sale.amount_received}}</td>
-        <td>UGX{{sale.get_change}}</td>
+        <td>Ugx.{{sale.part.unit_price}}</td>
+        <td>Ugx.{{sale.get_total}}</td>
+        <td>Ugx.{{sale.amount_received}}</td>
+        <td>Ugx.{{sale.get_change}}</td>
       </tr>
     </tbody>
     {% endfor %}

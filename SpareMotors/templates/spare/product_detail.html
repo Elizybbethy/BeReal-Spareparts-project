@@ -1,28 +1,26 @@
 {% extends 'spare/base.html'%} {% block content%}
 <br></br>
-
-<div class = "container" id="action">
-    <a href="{% url 'issue_item' product.id %}" ><input type="submit" value="Buy Item" class="btn btn-secondary" btn type="button"/></a>
-    <a href="{% url 'add_to_stock' product.id %}" ><input type= "submit" value="Add Stock" class="btn btn-secondary btn" type="button"/></a>
-</div>
-
-<br></br>
+<h1 class="text-center" id="heading"> Selected Item</h1>
 <div class = "container">
   <table class="table" id="table">
     <thead class="thead-dark">
-      <tr>
+      <tr style="text-align: center;">
         <th scope="col">Category</th>
         <th scope="col">Item Name</th>
         <th scope="col">Quantity</th>
         <th scope="col">Unit Price(Ugx)</th>   
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
-      <tr>    
+      <tr style="text-align: center;">    
         <td>{{product.Category_name}}</td>
         <td>{{product.part_name}}</td>
         <td>{{product.total_quantity}}</td>
-        <td>Ugx{{product.unit_price}}</td>   
+        <td>Ugx{{product.unit_price}}</td>
+        <td>
+          <a href="{% url 'issue_item' product.id %}" ><input type="submit" value="Buy Item" class="btn btn-secondary" btn type="button"/></a>
+          <a href="{% url 'add_to_stock' product.id %}" ><input type= "submit" value="Add Stock" class="btn btn-secondary btn" type="button"/></a></td>  
       </tr>
     </tbody>  
   </table>
