@@ -23,6 +23,10 @@ urlpatterns = [
     #Receipt url
     path('receipt', views.receipt, name='receipt'),
     path('receipt/<int:receipt_id>', views.receipt_detail, name='receipt_detail'),
+    path('final/<int:receipt_id>', views.final_receipt, name='final_receipt'),
+    
+    #category
+    path('category/', views.category, name='category'),
     
     #Login path 
     path('login/', auth_views.LoginView.as_view(template_name='spare/login.html'), name= 'login'),

@@ -22,6 +22,7 @@ class Product(models.Model):
     unit_price = models.IntegerField(default=0, null=True, blank=False)
     country_of_origin = models.CharField(max_length=50, null=True, blank=False)
     branch_name = models.CharField(max_length=50, null=True, blank=False)
+    part_number = models.IntegerField(default=0,null=False,blank=False)
 
     def __str__(self):
         return self.part_name

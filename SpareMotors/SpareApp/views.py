@@ -83,3 +83,13 @@ def receipt(request):
 def receipt_detail(request, receipt_id):
     receipt = Sale.objects.get(id=receipt_id)
     return render(request, 'spare/receipt_detail.html', {'receipt':receipt})
+
+def final_receipt(request, receipt_id):
+    receipt = Sale.objects.get(id=receipt_id)
+    return render(request, 'spare/final_receipt.html', {'receipt':receipt})
+
+#category
+@login_required
+def category(request):
+    return render(request, 'spare/category.html')
+

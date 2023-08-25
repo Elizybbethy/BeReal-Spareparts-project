@@ -21,6 +21,7 @@
       <tr style="text-align: center;">
         <th scope="col">Category</th>
         <th scope="col">Item Name</th>
+        <th scope="col">ID</th>
         <th scope="col">Quantity</th>
         <th scope="col">Unit Price(Ugx)</th>
         <th scope="col">Action</th>
@@ -31,6 +32,7 @@
       <tr style="text-align: center;">    
         <td>{{product.Category_name }}</td>
         <td>{{product.part_name}}</td>
+        <td>B00.0{{product.id}}</td>
         <td>{{product.total_quantity}}</td>
         <td>Ugx{{product.unit_price}}</td>
         <td ><a href="{% url 'product_detail' product.id %}"

@@ -1,0 +1,24 @@
+#ct-card{
+    width: 18rem;
+    height: 22rem;
+    padding: 2%;
+    margin: 5%;
+    text-align: center;
+
+
+}
+
+#ct-img-E{
+    width: 100%;
+    height: 100%;
+}
+
+#ct-img-b{
+    width: 100%;
+    height: 52%;
+}
+
+#cardbody{
+    font-size: larger;
+}
+

@@ -1,0 +1,33 @@
+{% extends 'spare/base.html'%}
+{% load static %}
+{% block content %}
+<div class="row" style="margin-left: 7%; margin-top: 2%">
+    <h1 id="heading" style="text-align:center;">Choose the Category</h1>
+    <div class="card" id="ct-card">
+        <h3 class="card-title">Engines</h3>
+        <img src="{% static 'css/images/engine.jpg'%}" class="card-img-top" id="ct-img-E">   
+        <div class="card-body" id="cardbody">
+            <p><strong>Click here.</strong></p>
+            <a href="#" class="btn btn-primary">Choose</a>
+        </div>
+    </div>
+
+    <div class="card" id="ct-card">
+        <h3 class="card-title">Battery</h3>
+        <img src="{% static 'css/images/battery.jpg'%}" class="card-img-top" id="ct-img-b">   
+        <div class="card-body" id="cardbody">
+            <p><strong>Click here.</strong></p>
+            <a href="#" class="btn btn-primary">Choose</a>
+        </div>
+    </div>
+
+    <div class="card" id="ct-card">
+        <h3 class="card-title">Tires</h3>
+        <img src="{% static 'css/images/tires.jpg' %}" class="card-img-top" id="ct-img-b">   
+        <div class="card-body" id="cardbody">
+            <p><strong>Click here.</strong></p>
+            <a href="#" class="btn btn-primary">Choose</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
