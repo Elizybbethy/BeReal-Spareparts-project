@@ -1,40 +1,99 @@
-{% extends 'spare/base.html' %}
-{% block content %}
-<br>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1 class="text-center" id="heading">Order Summary</h1><br>
-            <div class="card">
-                <div class="card-header">
-                    <h1 class="text-center"><strong>Customer Name: {{receipt.issued_to | title}}</strong></h1>
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeReal</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/final.css' %}">
+</head>
+
+<body>
+    <nav class="nav navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/home">
+                <img src="{% static 'css/images/bereallogo.png'%}" alt="Logo" width="45" height="50"
+                    style="border-radius: 50%;" class="d-inline-block align-text-top">
+                <h1 class="d-inline-block align-text-top" style="color: black;">BeRealMotor</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/home" style="color: blue;">Home</a>
+                    </li>
+                </ul>
+            </div>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/logout" style="color: blue;">Logout</a>
+            </li>
+        </div>
+    </nav>
+
+
+    <div class="card">
+        <h2 id="heading" style="text-align:center; ">Sales Receipt</h2>
+        <span>
+            <br>
+            <img src="{% static 'css/images/bereallogo.png'%}" alt="Logo" width="45" height="50"
+                style="border-radius: 50%;" class="d-inline-block align-text-top">
+            <h1 class="d-inline-block align-text-top" style="color: black;margin-left: 2%">BeReal Spare Motors</h1>
+            <h6 style="margin-left:11%; "> Kampala, Uganda</h6>
+        </span>
+        <div class=card-body>
+            <div style="margin-left:70%">
+                <h6>Receipt No: </h6>
+                <h6>Date: </h6>
+            </div>
+            <h4 class="card-title">Customer Name: {{receipt.issued_to| title}}</h4>
+            <br>
+                <div class="row">
+                    <div class="col-3"><h6>SparePart name</h6></div>
+                    <div class="col-3"><h5>Qty</h5></div>
+                    <div class="col-3"><h5>Unit Price</h5></div>
+                    <div class="col-3"><h5>Amount</h5></div>
                 </div>
-                <div class="card-block">
-                    <div class="table-responsive">
-                        <table class="text table" >
-                            <thead class="final_receipt">
-                                <tr >
-                                    <td><strong>Part Name</strong></td>    
-                                    <td><strong>Item Quantity</strong></td>
-                                    <td class="text-xs-center"><strong>Total Bill(Ugx)</strong></td>
-                                    <td class="text-xs-right"><strong>Amount Paid(Ugx)</strong></td>
-                                    <td class="text-xs-right"><strong>Total Balance(Ugx)</strong></td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>{{receipt.part | title}}</td>
-                                    <td class="text-xs-center">{{receipt.quantity }}</td>
-                                    <td class="text-xs-right">Ugx{{receipt.get_total | title}}</td>
-                                    <td class="text-xs-right">Ugx{{receipt.amount_received}}</td>
-                                    <td class="text-xs-right">Ugx{{receipt.get_change}}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="row">
+                <div class="col-3"><h5>{{receipt.part}}</h5></div>
+                <div class="col-3"><h5>{{receipt.quantity}}</h5></div>
+                <div class="col-3"><h5>{{receipt.amount_received}}</h5></div>
+                <div class="col-3"><h5>{{receipt.get_total}}.0 Ugx</h5></div>
                 </div>
+            
+            <br>
+        </div>
+        <div class="row" style="margin-left: 2%;">
+            <div class="col-8">
+                <h5>Cash:</h5>
+                <h5>Balance:</h5>
+            </div>
+            <div class="col-4" style="text-align:right;">
+                <h5>{{receipt.amount_received}}.0 Ugx</h5>
+                <h5>{{receipt.get_change}}.0 Ugx</h5>
             </div>
         </div>
+        <br>
+        <div>
+            <br>
+            <h6> Received By:.....................................................</h6>
+            <h6>You Were Served By: </h6><br>
+            <p style="text-align:center; font-size:12px; padding:0;margin:0;">Thank you!!! Please Come Again.</p>
+            <p style="color: blue; text-align:center; font-size:12px; padding:0;margin:0;">Powering Your Drive, Anytime, Anywhere!</p>
+        </div>
+        </div>
     </div>
-</div>
-{% endblock %}
+    
+</body>
+
+</html>

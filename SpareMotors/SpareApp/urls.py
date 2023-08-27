@@ -23,7 +23,7 @@ urlpatterns = [
     #Receipt url
     path('receipt', views.receipt, name='receipt'),
     path('receipt/<int:receipt_id>', views.receipt_detail, name='receipt_detail'),
-    path('final/<int:receipt_id>', views.final_receipt, name='final_receipt'),
+    
     
     #category
     path('category/', views.category, name='category'),
